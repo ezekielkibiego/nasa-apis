@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchGithubData } from "../services/githubService";
+import { fetchGitHubData } from "../services/githubService";
 
 export default function useGithub() {
   const [githubData, setGithubData] = useState(null);
@@ -10,7 +10,7 @@ export default function useGithub() {
     const getGithubData = async () => {
       setLoading(true);
       try {
-        const data = await fetchGithubData();
+        const data = await fetchGitHubData();
         setGithubData(data);
       } catch (err) {
         setError(err);
